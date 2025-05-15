@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html><body>
+<form onsubmit="return validateForm()">
+  Username: <input type="text" id="username"><br>
+  Password: <input type="password" id="password"><br>
+  Confirm Password: <input type="password" id="confirm"><br>
+  <input type="submit" value="Register">
+</form>
+<script>
+function validateForm() {
+  let u = username.value, p = password.value, c = confirm.value;
+  if (u.length < 5) return alert("Username too short"), false;
+  if (p.length < 8) return alert("Password too short"), false;
+  if (p !== c) return alert("Passwords do not match"), false;
+  return true;
+}
+</script>
+</body></html>
+

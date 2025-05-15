@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Simple Book Cart</title>
+</head>
+<body>
+<h2>Book Store</h2>
+<div>
+  <button onclick="addToCart('Book A')">Add Book A</button>
+  <button onclick="addToCart('Book B')">Add Book B</button>
+  <button onclick="addToCart('Book C')">Add Book C</button>
+</div>
+<h3>Your Cart:</h3>
+<ul id="cartList"></ul>
+<script>
+  const cart = [];
+  function addToCart(book) {
+    cart.push(book);
+    renderCart();
+  }
+  function renderCart() {
+    const list = document.getElementById('cartList');
+    list.innerHTML = '';
+    cart.forEach((book, i) => {
+      const li = document.createElement('li');
+      li.textContent = book;
+      list.appendChild(li);
+    });
+  }
+</script>
+</body>
+</html>
+

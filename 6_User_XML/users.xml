@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+  <user>
+    <username>john_doe</username>
+    <password>5f4dcc3b5aa765d61d8327deb882cf99</password>
+    <email>john@example.com</email>
+    <history>
+      <item>
+        <title>Clean Code</title>
+        <date>2025-04-20</date>
+        <price>29.99</price>
+      </item>
+      <item>
+        <title>1984</title>
+        <date>2025-03-15</date>
+        <price>9.99</price>
+      </item>
+    </history>
+  </user>
+</users>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html><body>
+<div id="nav">
+  <button onclick="loadBook('book1')">Book 1</button>
+  <button onclick="loadBook('book2')">Book 2</button>
+</div>
+<div id="content"></div>
+<script>
+const books = {
+  book1: "Book 1: JavaScript Essentials",
+  book2: "Book 2: Mastering Python"
+};
+function loadBook(id) {
+  content.innerHTML = books[id];
+}
+</script>
+</body></html>
+

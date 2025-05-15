@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <div id="cart">
+        <!-- Cart items will be displayed here -->
+    </div>
+    <button onclick="updateCart(1, 2)">Update Cart</button>
+</body>
+<script>
+        function updateCart(itemId, quantity) {
+            let xhr = new XMLHttpRequest();
+            xhr.open('POST', 'CartServlet', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onload = function() {
+                if (xhr.status == 200) {
+                    document.getElementById('cart').innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send('itemId=' + itemId + '&quantity=' + quantity);
+        }
+    </script>
+</html>

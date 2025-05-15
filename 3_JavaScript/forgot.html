@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html><body>
+<form onsubmit="return validateEmail()">
+  Email: <input type="email" id="email"><br>
+  <input type="submit" value="Reset Password">
+</form>
+<script>
+const users = ["user@example.com"];
+function validateEmail() {
+  let e = email.value;
+  let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!re.test(e)) return alert("Invalid email"), false;
+  if (!users.includes(e)) return alert("Email not found"), false;
+  return alert("Reset link sent"), true;
+}
+</script>
+</body></html>
+
